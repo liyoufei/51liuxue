@@ -1,0 +1,316 @@
+<html xmlns:th="http://www.thymeleaf.org" lang="zh-hans">
+<head th:replace="~{header :: head}"></head>
+<body>
+<div th:replace="~{header :: common-navigation}"></div>
+
+<!--左边悬浮图标-->
+<div class="div_ul">
+  <ul class="juedui">
+    <li class="seach ie"><a href="#"></a><img src="/img/seach_main.png" /></li>
+    <li class="phone ie"><a href="#"></a><img src="/img/phone_main.png"  /></li>
+    <li class="tip ie"><a href="#"></a><img src="/img/tip_main.png" /></li>
+    <li class="weixin ie"><a href="#"></a><img src="/img/weixin_main.png"  /></li>
+
+  </ul>
+</div>
+
+<!--左边滚动到顶部-->
+<div id="top-btn">
+  <a id="nav-top" class="fa fa-chevron-up top-icon"></a>
+</div>
+
+
+<hr style="margin: 0px;"/>
+<div class="container header-main user-content " >
+  <div class="header-main-left pull-left">
+    <div class="header-main-left_form">
+      <h4 class="title"><i class="fa fa-send" data-original-title="" title=""></i>我要留学方案 </h4>
+      <form action="" id="abroad-form">
+        <div class="row country">
+          <div class="col-xs-2"><span style="font-size:12px;">米国</span><a class="country-us active" href="javascript:void 0;"><img src="/img/Index-8-23_03.jpg" alt=""/><em ></em></a></div>
+          <div class="col-xs-2"><span style="font-size:12px;">米大国</span><a class="country-us active" href="javascript:void 0;"><img src="/img/Index-8-23_06.png" alt=""/><em class="em"></em></a></div>
+          <div class="col-xs-2"><span style="font-size:12px;">米大国</span><a class="country-us active" href="javascript:void 0;"><img src="/img/Index-8-23_08.jpg" alt=""/><em class="em"></em></a></div>
+          <div class="col-xs-2"><span>米国</span><a class="country-us active" href="javascript:void 0;"><img src="/img/Index-8-23_10.jpg" alt=""/><em class="em"></em></a></div>
+          <div class="col-xs-2"><span>米国</span><a class="country-us active" href="javascript:void 0;"><img src="/img/Index-8-23_12.jpg" alt=""/><em class="em"></em></a></div>
+          <div class="col-xs-2"><span>米国</span><a class="country-us active" href="javascript:void 0;"><img src="/img/Index-8-23_15.jpg" alt=""/><em class="em"></em></a></div>
+        </div>
+        <div class="ui-select ui-select-1">
+          <p><i class="fa fa-clock-o" data-original-title="" title=""></i>计划出国时间</p>
+          <select type="text" class=" " name="eistudt_year">
+            <option disabled="disabled" selected="selected"> 您打算出国的时间</option>
+            <option value="1">今年</option>
+            <option value="2">明年</option>
+            <option value="3">后年</option>
+            <option value="4">3年以后</option>
+          </select>
+        </div>
+
+
+
+        <div class="ui-select ui-select-2">
+          <p> <i class="fa fa-plane" data-original-title="" title=""></i>选择留学方向</p>
+
+          <select type="text" class=" " name="eistudt_year">
+            <option disabled="disabled" selected="selected"> 您的留学方向</option>
+            <option value="1">幼儿园</option>
+            <option value="2">小学</option>
+            <option value="3">初中</option>
+            <option value="4">高中</option>
+            <option value="5">本科</option>
+            <option value="6">研究生</option>
+          </select>
+        </div>
+
+
+
+          <input type="tell" placeholder="请输入您的手机号码"/>
+
+
+
+
+
+
+
+        <button type="submit" class="abroad-submit">一键申请</button>
+      </form>
+          <p class="form_p">已经有留学么账号？请 <a href="">登入</a> </p>
+
+
+
+
+    </div>
+  </div>
+
+
+  <div class="header-main-right pull-right">
+    <div class="run">
+
+      <div id="my-ad5" class="carousel slide" data-ride="carousel" data-interval="3000">
+        <div class="carousel-inner">
+          <div class="item active">
+            <img src="/img/2_68.jpg" alt=""/>
+          </div>
+          <div class="item">
+            <img src="/img/2_68.jpg" alt=""/>
+          </div>
+          <div class="item">
+            <img src="/img/2_68.jpg" alt=""/>
+          </div>
+          <div class="item">
+            <img src="/img/2_68.jpg" alt=""/>
+          </div>
+        </div>
+
+        <!--上下一张按钮不随内容滚动-->
+        <a data-slide="prev" class="carousel-control left" href="#my-ad5">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a data-slide="next" class="carousel-control right" href="#my-ad5">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+      </div>
+
+
+
+
+
+    </div>
+    <div class="header-main-right_ul">
+      <h6><b></b>选择我们的六大理由</h6>
+    <ul class="advantage">
+      <li class="active">
+        <a href="#">∞</a>
+        <div class="advantage-text">
+          <h5>无限制</h5>
+          <small>没有时差和地域上的限制随时随地申请留学。</small>
+        </div>
+      </li>
+
+      <li>
+        <a href="#" class="fa fa-building-o" data-original-title="" title=""></a>
+        <div class="advantage-text">
+          <h5>院校多</h5>
+          <small>院校覆盖国家广覆盖阶段全从幼儿园到大学，应有尽有</small>
+        </div></li>
+
+      <li>
+        <a href="#" class="fa fa-dollar" data-original-title="" title=""></a>
+        <div class="advantage-text">
+          <h5>0收费</h5>
+          <small>利用Abroad.me留学么自助申请平台免费申请心仪院校</small>
+        </div></li>
+
+      <li>
+        <a href="#" class="fa fa-users" data-original-title="" title=""></a>
+        <div class="advantage-text">
+          <h5>资深外籍顾问</h5>
+          <small>接触国家多，留学办理经验丰富，成功率巨高</small>
+        </div></li>
+      <li>
+        <a href="#" class="fa  fa-sort-amount-desc" data-original-title="" title=""></a>
+        <div class="advantage-text">
+          <h5>流程少</h5>
+          <small>利用Abroad.me留学么自助申请平台的留学三步走，轻松搞定出国留学</small>
+        </div></li>
+      <li>
+        <a href="#" class="fa  fa-clock-o" data-original-title="" title=""></a>
+        <div class="advantage-text">
+          <h5>时间短</h5>
+          <small>利用留学三步走，大大缩短留学申请时间</small>
+        </div></li>
+    </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="container mt30">
+  <h5><i class="fa fa-dollar"></i>留学看这里</h5>
+  <hr/>
+  <ul class="index-box">
+    <li>
+      <a class="unstyle" href="##">
+        <div class="hover-bottom"><a><i class="fa fa-user"></i></a></div>
+        <div class="hover-top"><h3 class="mt20">留学方案</h3>
+          <small>abroad program </small></div>
+      </a>
+    </li>
+    <li>
+      <a class="unstyle" href="##">
+        <div class="hover-bottom"><a><i class="fa fa-dollar"></i></a></div>
+        <div class="hover-top"><h3 class="mt20">费用测算</h3>
+          <small>Estimate your costs </small></div>
+      </a>
+    </li>
+    <li>
+      <a class="unstyle" href="##">
+        <div class="hover-bottom"><a><i class="fa fa-cloud-upload"></i></a></div>
+        <div class="hover-top"><h3 class="mt20">在线申请</h3>
+          <small>Application Online </small></div>
+      </a>
+    </li>
+    <li>
+      <a class="unstyle" href="##">
+        <div class="hover-bottom"><a><i class="fa fa-dashboard"></i></a></div>
+        <div class="hover-top"><h3 class="mt20">英文测试</h3>
+          <small>English & abroad</small></div>
+      </a>
+    </li>
+  </ul>
+
+
+
+
+
+  <div class="short-intro index-sbz">
+    <div class="gap"></div>
+    <div class=" row-wrap" data-gutter="60">
+      <div class="col-xs-3">
+        <strong>申请留学</strong>
+        <b>只需三步走</b>
+      </div>
+      <div class="col-xs-3">
+        <div class="thumb"><i class="fa fa-lock  round box-icon-big box-icon-gray animate-icon-top-to-bottom"></i>
+          <div class="thumb-caption">
+            <h5 class="thumb-title">搜索</h5>
+            <p class="thumb-desc">搜索你想要的院校，找出您的最爱</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-3">
+        <div class="thumb"><i class="fa fa-send  round box-icon-big box-icon-gray animate-icon-top-to-bottom"></i>
+          <div class="thumb-caption">
+            <h5 class="thumb-title">准备</h5>
+            <p class="thumb-desc">通过我们联系学校，获取相关申请要求整理相关文档</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-3">
+        <div class="thumb"><i class="fa fa-user  round box-icon-big box-icon-gray animate-icon-top-to-bottom"></i>
+          <div class="thumb-caption">
+            <h5 class="thumb-title">申请</h5>
+            <p class="thumb-desc">获取申请，签证条件，旅行计划，方面的帮助</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="gap gap-small"></div>
+  </div>
+
+
+  <div class="start-here ">
+    <h5><i class="fa fa-dollar"></i>留学从这里了解</h5>
+    <hr/>
+    <div class="col-xs-4">
+      <a class="start-here-a" href="">
+      <img src="i/da_xue_3.jpg" alt=""/>
+        <i class="" >去猫一眼</i>
+      <!--<i class="fa fa-plus round box-icon-small hover-icon i round" data-original-title="" title="" style="top: 70%; opacity: 0;"></i>-->
+      </a>
+      <p><b>澳大利亚</b> <span class="pull-right">学校数量：104</span></p>
+    </div>
+    <div class="col-xs-4">
+      <a class="start-here-a" href="">
+      <img src="i/da_xue_3.jpg" alt=""/>
+        <i class="" >去猫一眼</i>
+      <!--<i class="fa fa-plus round box-icon-small hover-icon i round" data-original-title="" title="" style="top: 70%; opacity: 0;"></i>-->
+      </a>
+      <p><b>澳大利亚</b> <span class="pull-right">学校数量：104</span></p>
+    </div>
+    <div class="col-xs-4">
+      <a class="start-here-a" href="">
+      <img src="i/da_xue_3.jpg" alt=""/>
+        <i class="" >去猫一眼</i>
+      <!--<i class="fa fa-plus round box-icon-small hover-icon i round" data-original-title="" title="" style="top: 70%; opacity: 0;"></i>-->
+      </a>
+      <p><b>澳大利亚</b> <span class="pull-right">学校数量：104</span></p>
+    </div>
+    <div class="col-xs-4">
+      <a class="start-here-a" href="">
+      <img src="i/da_xue_3.jpg" alt=""/>
+        <i class="" >去猫一眼</i>
+      <!--<i class="fa fa-plus round box-icon-small hover-icon i round" data-original-title="" title="" style="top: 70%; opacity: 0;"></i>-->
+      </a>
+      <p><b>澳大利亚</b> <span class="pull-right">学校数量：104</span></p>
+    </div>
+    <div class="col-xs-4">
+      <a class="start-here-a" href="">
+      <img src="i/da_xue_3.jpg" alt=""/>
+        <i class="" >去猫一眼</i>
+      <!--<i class="fa fa-plus round box-icon-small hover-icon i round" data-original-title="" title="" style="top: 70%; opacity: 0;"></i>-->
+      </a>
+      <p><b>澳大利亚</b> <span class="pull-right">学校数量：104</span></p>
+    </div>
+    <div class="col-xs-4">
+      <a class="start-here-a" href="">
+      <img src="i/da_xue_3.jpg" alt=""/>
+        <i class="" >去猫一眼</i>
+      <!--<i class="fa fa-plus round box-icon-small hover-icon i round" data-original-title="" title="" style="top: 70%; opacity: 0;"></i>-->
+      </a>
+      <p><b>澳大利亚</b> <span class="pull-right">学校数量：104</span></p>
+    </div>
+
+
+  </div>
+
+</div>
+
+  <script>
+    $(document).ready(function() {
+
+      $("#owl-demo").owlCarousel({
+
+        autoPlay: false, //Set AutoPlay to 3 seconds
+
+        items : 4,
+        itemsDesktop : [1199,4],
+        itemsDesktopxsall : [979,4]
+
+      });
+
+    });
+
+  </script>
+</body>
+</html>

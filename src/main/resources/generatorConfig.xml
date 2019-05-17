@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <context id="MySqlContext" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+
+        <commentGenerator>
+            <property name="suppressDate" value="false"/>
+            <!-- 设置没有默认注释，如果需要自定义注释，可以百度相关资料-->
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+
+        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/51liuxue??useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC"
+                        userId="root"
+                        password="123456">
+            <property name="nullCatalogMeansCurrent" value="true" />
+        </jdbcConnection>
+
+        <!--根据table生成model-->
+        <javaModelGenerator targetPackage="com.sss.model" targetProject="D:\project\51liuxue\src\main\java">
+            <property name="enableSubPackages" value="true" />
+            <property name="trimStrings" value="true" />
+        </javaModelGenerator>
+
+        <!--生成对应的sql语句-->
+        <sqlMapGenerator targetPackage="mapper"  targetProject="D:\project\51liuxue\src\main\resources">
+            <property name="enableSubPackages" value="true" />
+        </sqlMapGenerator>
+
+        <!--生成dao接口文件-->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.sss.dao" targetProject="D:\project\51liuxue\src\main\java">
+            <property name="enableSubPackages" value="true" />
+        </javaClientGenerator>
+
+        <table tableName="user_detail">
+        </table>
+
+    </context>
+</generatorConfiguration>

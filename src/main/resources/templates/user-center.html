@@ -1,0 +1,187 @@
+<html xmlns:th="http://www.thymeleaf.org" lang="zh-hans">
+<head th:replace="~{header :: head}"></head>
+<body>
+<div th:replace="~{header :: common-navigation}"></div>
+
+<hr style="margin: 0px;"/>
+<div class="user-content ">
+  <div class="user-content-left">
+    <aside class="user-profile-sidebar">
+      <div class="user-profile-avatar text-center">
+          <a class="popup-with-move-anim " data-toggle="modal" data-target=".bs-example-modal-sm"   href="#portrait-popUp-page"><img title="更改头像" th:src="${#httpServletRequest.getAttribute('loginUser').getAvatarUrl()}"></a>
+        <div class="mfp-hide"></div>
+          <h5 th:text="${#httpServletRequest.getAttribute('loginUser').getName()}"></h5>
+          <p th:text="${#httpServletRequest.getAttribute('loginUser').getCreatedDate()}"></p>
+      </div>
+     <ul class="list user-profile-nav">
+          <li><a href="/user/profile/"><i class="fa fa-user"></i>概览</a>
+          </li>
+          <li><a href="/user/profile_setting"><i class="fa fa-pencil"></i>个人设置</a>
+          </li>
+          <!--<li><a href="user-center-follow.html"><i class="fa fa-camera"></i>我的关注</a>
+          </li>-->
+          <li><a href="/user/history"><i class="fa fa-clock-o"></i>浏览记录</a>
+          </li>
+          <li><a href="/user/community"><i class="fa fa-building-o"></i>我的社区</a>
+          </li>
+          <li><a href="/user/favorite"><i class="fa fa-university"></i>我的院校</a>
+          </li>
+          <li><a href="/user/message"><i class="fa fa-bell-o"></i>我的消息</a>
+          </li>
+      </ul>
+  </aside>
+  </div>
+  <div class="user-content-right">
+    <h3>信息概览</h3>
+    <ul class="list list-inline user-profile-statictics mb30">
+                        <li class="booking-item">
+							<a href="#tab-1" data-toggle="tab">
+							<i class="fa fa-file-text user-profile-statictics-icon"></i>
+                            <h5>50%</h5>
+                            <p>资料</p>
+							</a>
+                        </li>
+                        <li class="booking-item">
+							<a href="#tab-2" data-toggle="tab">
+							<i class="fa fa-globe user-profile-statictics-icon"></i>
+                            <h5>26</h5>
+                            <p>已浏览</p>
+							</a>
+                        </li>
+                        <li class="booking-item">
+							<a href="#tab-3" data-toggle="tab">
+							<i class="fa fa-building-o user-profile-statictics-icon"></i>
+                            <h5>15</h5>
+                            <p>动态</p>
+							</a>
+                        </li>
+                        <li class="booking-item">
+							<a href="#tab-4" data-toggle="tab">
+							<i class="fa fa-flag-o user-profile-statictics-icon"></i>
+                            <h5>3</h5>
+                            <p>在考虑</p>
+							</a>
+                        </li>
+                        <li class="booking-item active">
+							<a href="#tab-5" data-toggle="tab">
+							<i class="fa fa-dashboard user-profile-statictics-icon"></i>
+                            <h5>80%</h5>
+                            <p>进度</p>
+							</a>
+                        </li>
+                    </ul>
+    <div class="tabbable">
+						<div class="tab-content">
+							<div class="tab-pane" id="tab-1">
+								<div>
+									<h5>您到目前已经填写了<span class="overview-num">&nbsp;50%&nbsp;</span>的资料</h5>
+									<h4>为了给您提供更准确的服务，建议您完善以下事项：</h4>
+									
+									<div>
+										<a class="btn btn-info" href="user-center-settings.html">继续填写个人信息</a>
+										<a class="btn btn-success" href="tools-GPA.html">GPA计算</a>
+										<a class="btn btn-success" href="tools-TOEFL.html">托福测试</a>
+										<a class="btn btn-success" href="tools-IELTS.html">雅思测试</a>
+									</div>
+								</div>
+							</div>
+							<div class="tab-pane" id="tab-2">
+								<div>
+									<h5>您到目前已经浏览了<span class="overview-num">&nbsp;26&nbsp;</span>所院校，可有找到自己心仪的？</h5>
+									<h4>您可以：</h4>
+									
+									<div>
+										<a class="btn btn-info" href="colleges.html">查看更多院校</a>
+										<a class="btn btn-success" href="#">找老师帮您选</a>
+									</div>
+								</div>
+							</div>
+							<div class="tab-pane" id="tab-3">
+								<div>
+									<h5>您一共发布或参与了<span class="overview-num">&nbsp;15&nbsp;</span>条社区动态</h5>
+									<h4>您可以：</h4>
+									
+									<div>
+										<a class="btn btn-success" href="user-center-community.html">查看您的社区</a>
+										
+									</div>
+								</div>
+							</div>
+							<div class="tab-pane" id="tab-4">
+								<div>
+									<h5>您目前有<span class="overview-num">&nbsp;3&nbsp;</span>所有意向的院校</h5>
+									<h4>您可以：</h4>
+									<div>
+										<a class="btn btn-info" href="user-center-colleges.html">查看您的院校</a>
+										<a class="btn btn-success" href="colleges.html">添加更多的院校</a>
+									</div>
+								</div>
+							</div>
+							<div class="tab-pane active" id="tab-5">
+								<div>
+									<h5>您到目前已经完成了<span class="overview-num">&nbsp;80%&nbsp;</span>的进度</h5>
+									<h4>您接下来还可以：</h4>
+									
+									<div>
+										<a class="btn btn-info" href="apply-process.html">查看申请方案</a>
+										<a class="btn btn-success" href="apply-intention.html">申请新的院校</a>
+									</div>
+								</div>
+							</div>
+						</div>
+				   </div>
+  </div>
+</div>
+
+
+
+<div class="modal fade bs-example-modal-sm in" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <button type="button" class="mfp-close" data-dismiss="modal">×</button>
+      <div id="eval-confirm" class="zoom-anim-dialog mfp-hide">
+        <div class="row">
+          <h3>更换头像</h3>
+          <form>
+
+            <div class="row">
+              <div class="col-xs-12">
+                <label>建议选择像素为300*300的图片</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-9">
+                <input class="form-control form-con" placeholder="示例. example@163.com" type="file" id="fileElem" multiple accept="image/*"  onchange="handleFiles(this)">
+              </div>
+
+              <div class="col-xs-3">
+                <input class="form-control" value="上传" type="submit">
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="preview" id="fileList">
+
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="text-center">
+                <input class="btn btn-primary" value="确认" type="submit">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+</body>
+</html>

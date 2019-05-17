@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sss.dao.UserDetailMapper">
+  <resultMap id="BaseResultMap" type="com.sss.model.UserDetail">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="realname" jdbcType="VARCHAR" property="realname" />
+    <result column="sex" jdbcType="VARCHAR" property="sex" />
+    <result column="school" jdbcType="VARCHAR" property="school" />
+    <result column="grade" jdbcType="VARCHAR" property="grade" />
+    <result column="gpa" jdbcType="REAL" property="gpa" />
+    <result column="dreamregion" jdbcType="VARCHAR" property="dreamregion" />
+    <result column="dreamschool" jdbcType="VARCHAR" property="dreamschool" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="qq" jdbcType="INTEGER" property="qq" />
+    <result column="gre" jdbcType="INTEGER" property="gre" />
+    <result column="tofel" jdbcType="INTEGER" property="tofel" />
+    <result column="ielts" jdbcType="REAL" property="ielts" />
+    <result column="act" jdbcType="INTEGER" property="act" />
+    <result column="gmat" jdbcType="INTEGER" property="gmat" />
+    <result column="degree" jdbcType="VARCHAR" property="degree" />
+    <result column="profession" jdbcType="VARCHAR" property="profession" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from user_detail
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.sss.model.UserDetail">
+    insert into user_detail (id, user_id, realname, 
+      sex, school, grade, 
+      gpa, dreamregion, dreamschool, 
+      phone, qq, gre, tofel, 
+      ielts, act, gmat, degree, 
+      profession)
+    values (#{id,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{realname,jdbcType=VARCHAR}, 
+      #{sex,jdbcType=VARCHAR}, #{school,jdbcType=VARCHAR}, #{grade,jdbcType=VARCHAR}, 
+      #{gpa,jdbcType=REAL}, #{dreamregion,jdbcType=VARCHAR}, #{dreamschool,jdbcType=VARCHAR}, 
+      #{phone,jdbcType=VARCHAR}, #{qq,jdbcType=INTEGER}, #{gre,jdbcType=INTEGER}, #{tofel,jdbcType=INTEGER},
+      #{ielts,jdbcType=REAL}, #{act,jdbcType=INTEGER}, #{gmat,jdbcType=INTEGER}, #{degree,jdbcType=VARCHAR}, 
+      #{profession,jdbcType=VARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.sss.model.UserDetail">
+    update user_detail
+    set user_id = #{userId,jdbcType=INTEGER},
+      realname = #{realname,jdbcType=VARCHAR},
+      sex = #{sex,jdbcType=VARCHAR},
+      school = #{school,jdbcType=VARCHAR},
+      grade = #{grade,jdbcType=VARCHAR},
+      gpa = #{gpa,jdbcType=REAL},
+      dreamregion = #{dreamregion,jdbcType=VARCHAR},
+      dreamschool = #{dreamschool,jdbcType=VARCHAR},
+      phone = #{phone,jdbcType=VARCHAR},
+      qq = #{qq,jdbcType=INTEGER},
+      gre = #{gre,jdbcType=INTEGER},
+      tofel = #{tofel,jdbcType=INTEGER},
+      ielts = #{ielts,jdbcType=REAL},
+      act = #{act,jdbcType=INTEGER},
+      gmat = #{gmat,jdbcType=INTEGER},
+      degree = #{degree,jdbcType=VARCHAR},
+      profession = #{profession,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByUserId" parameterType="com.sss.model.UserDetail">
+    update user_detail
+    set user_id = #{userId,jdbcType=INTEGER},
+        realname = #{realname,jdbcType=VARCHAR},
+        sex = #{sex,jdbcType=VARCHAR},
+        school = #{school,jdbcType=VARCHAR},
+        grade = #{grade,jdbcType=VARCHAR},
+        gpa = #{gpa,jdbcType=REAL},
+        dreamregion = #{dreamregion,jdbcType=VARCHAR},
+        dreamschool = #{dreamschool,jdbcType=VARCHAR},
+        phone = #{phone,jdbcType=VARCHAR},
+        qq = #{qq,jdbcType=INTEGER},
+        gre = #{gre,jdbcType=INTEGER},
+        tofel = #{tofel,jdbcType=INTEGER},
+        ielts = #{ielts,jdbcType=REAL},
+        act = #{act,jdbcType=INTEGER},
+        gmat = #{gmat,jdbcType=INTEGER},
+        degree = #{degree,jdbcType=VARCHAR},
+        profession = #{profession,jdbcType=VARCHAR}
+    where user_id = #{userId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select id, user_id, realname, sex, school, grade, gpa, dreamregion, dreamschool, 
+    phone, qq, gre, tofel, ielts, act, gmat, degree, profession
+    from user_detail
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="findByUserId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select id, user_id, realname, sex, school, grade, gpa, dreamregion, dreamschool,
+           phone, qq, gre, tofel, ielts, act, gmat, degree, profession
+    from user_detail
+    where user_id = #{userId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id, user_id, realname, sex, school, grade, gpa, dreamregion, dreamschool, 
+    phone, qq, gre, tofel, ielts, act, gmat, degree, profession
+    from user_detail
+  </select>
+</mapper>

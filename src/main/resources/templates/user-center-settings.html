@@ -1,0 +1,176 @@
+<html xmlns:th="http://www.thymeleaf.org" lang="zh-hans">
+<head th:replace="~{header :: head}"></head>
+<body>
+<div th:replace="~{header :: common-navigation}"></div>
+
+
+<hr style="margin: 0px;"/>
+<div class="user-content">
+    <div class="user-content-left">
+        <aside class="user-profile-sidebar">
+            <div class="user-profile-avatar text-center">
+                <a class="popup-with-move-anim " data-toggle="modal" data-target=".bs-example-modal-sm"   href="#portrait-popUp-page"><img title="更改头像" th:src="${#httpServletRequest.getAttribute('loginUser').getAvatarUrl()}"></a>
+                <div class="mfp-hide"></div>
+                <h5 th:text="${#httpServletRequest.getAttribute('loginUser').getName()}"></h5>
+                <p th:text="${#httpServletRequest.getAttribute('loginUser').getCreatedDate()}"></p>
+            </div>
+            <ul class="list user-profile-nav">
+                <li><a href="/user/profile/"><i class="fa fa-user"></i>概览</a>
+                </li>
+                <li><a href="/user/profile_setting"><i class="fa fa-pencil"></i>个人设置</a>
+                </li>
+                <!--<li><a href="user-center-follow.html"><i class="fa fa-camera"></i>我的关注</a>
+                </li>-->
+                <li><a href="/user/history"><i class="fa fa-clock-o"></i>浏览记录</a>
+                </li>
+                <li><a href="/user/community"><i class="fa fa-building-o"></i>我的社区</a>
+                </li>
+                <li><a href="/user/favorite"><i class="fa fa-university"></i>我的院校</a>
+                </li>
+                <li><a href="/user/message"><i class="fa fa-bell-o"></i>我的消息</a>
+                </li>
+            </ul>
+        </aside>
+    </div>
+  <div class="user-content-right">
+      <form action="/user/profile_update" method="post">
+   <div class="user-content-from-left">
+
+        <h4>个人信息</h4>
+        <div class="form-group form-group-icon-left"><i class="fa fa-user input-icon"></i>
+            <label>真实姓名（以便招生官联系）</label>
+            <input class="form-control" name="realname" th:value="${userDetail.realname}" type="text">
+        </div>
+        <div class="form-group form-group-icon-left">
+               <div class="form-group form-group-Gender">
+              <label style="display:block;">性别</label>                                                       
+              <input name="sex" type="radio" value="男"><span style="margin:0 10px;">男</span>
+              <input name="sex" type="radio" value="女"><span style="margin:0 10px;">女</span>
+                                   
+             </div>
+        </div>
+
+        <div class="form-group form-group-icon-left"><i class="fa fa-phone input-icon"></i>
+            <label>Phone Number</label>
+            <input class="form-control" th:value="${userDetail.phone}" name="phone" type="text">
+        </div>
+
+        <div class="form-group form-group-icon-left"><i class="fa fa-qq input-icon"></i>
+            <label>QQ号</label>
+            <input class="form-control" th:value="${userDetail.qq}" name="qq" type="text">
+        </div>
+        <div class="gap gap-small"></div>
+   </div>
+   <div class="user-content-from-right">
+                            <h4>学习信息</h4>
+
+                                <div class="form-group form-group-icon-left"><i class="fa fa-book input-icon"></i>
+                                    <label>现在状态</label>
+                                    <input class="form-control" name="grade" th:value="${userDetail.grade}" type="text">
+                                </div>
+                                <div class="form-group form-group-icon-left"><i class="fa fa-trophy input-icon"></i>
+                                    <label>绩点</label>
+                                    <input class="form-control" name="gpa" th:value="${userDetail.gpa}" type="text">
+                                </div>
+                                <div class="form-group form-group-icon-left"><i class="fa fa-bank input-icon"></i>
+                                    <label>在读院校</label>
+                                    <input class="form-control"name="school" th:value="${userDetail.school}" type="text">
+                                </div>  
+                                <!--<hr style="width:90%; margin-left:0;">                              -->
+
+                           
+							 <h4>留学信息</h4>
+
+                                <div class="form-group form-group-icon-left"><i class="fa fa-paper-plane input-icon"></i>
+                                    <label>求学目标</label>
+                                    <input class="form-control" name="degree" th:value="${userDetail.degree}" type="text">
+                                </div>
+                                <div class="form-group form-group-icon-left"><i class="fa fa-hand-o-right input-icon"></i>
+                                    <label>专业方向</label>
+                                    <input class="form-control" name="profession" th:value="${userDetail.profession}" type="text">
+                                </div>
+                                <div class="form-group form-group-icon-left"><i class="fa fa-eraser input-icon"></i>
+                                    <label>择校倾向</label>
+                                    <input class="form-control" name="dreamschool" th:value="${userDetail.dreamschool}" type="text">
+                                </div>
+								<div class="form-group form-group-icon-left"><i class="fa fa-globe input-icon"></i>
+                                    <label>意向国家</label>
+                                    <input class="form-control" name="dreamregion" th:value="${userDetail.dreamregion}" type="text">
+                                </div>
+								<div class="form-group form-group-icon-left"><i class="fa fa-tasks input-icon"></i>
+                                    <label>托福总分</label>
+                                    <input class="form-control" name="tofel" th:value="${userDetail.tofel}" type="text">
+                                </div>
+								<div class="form-group form-group-icon-left"><i class="fa fa-tasks input-icon"></i>
+                                    <label>雅思成绩</label>
+                                    <input class="form-control" name="ielts" th:value="${userDetail.ielts}" type="text">
+                                </div>
+								<div class="form-group form-group-icon-left"><i class="fa fa-tasks input-icon"></i>
+                                    <label>ACT成绩</label>
+                                    <input class="form-control" name="act" th:value="${userDetail.act}" type="text">
+                                </div>
+								<div class="form-group form-group-icon-left"><i class="fa fa-tasks input-icon"></i>
+                                    <label>GMAT成绩</label>
+                                    <input class="form-control" name="gmat" th:value="${userDetail.gmat}" type="text">
+                                </div>
+								<div class="form-group form-group-icon-left"><i class="fa fa-tasks input-icon"></i>
+                                    <label>GRE成绩</label>
+                                    <input class="form-control" name="gre" th:value="${userDetail.gre}" type="text">
+                                </div>
+                                <!--<hr style="width:90%; margin-left:0;">-->
+                                <input class="btn btn-primary text-right mb50" type="submit" value="保存">
+
+   </div>
+
+          </form>
+  </div>
+</div>
+
+<div class="modal fade bs-example-modal-sm in" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <button type="button" class="mfp-close" data-dismiss="modal">×</button>
+            <div id="eval-confirm" class="zoom-anim-dialog mfp-hide">
+                <div class="row">
+                    <h3>更换头像</h3>
+                    <form>
+
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <label>建议选择像素为300*300的图片</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-9">
+                                <input class="form-control form-con" placeholder="示例. example@163.com" type="file" id="fileElem" multiple accept="image/*"  onchange="handleFiles(this)">
+                            </div>
+
+                            <div class="col-xs-3">
+                                <input class="form-control" value="上传" type="submit">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="preview" id="fileList">
+
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="text-center">
+                                <input class="btn btn-primary" value="确认" type="submit">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
